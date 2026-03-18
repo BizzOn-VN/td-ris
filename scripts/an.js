@@ -1714,29 +1714,35 @@ $(".dropdown-check-list .anchor").click(function(){
 const containers = document.querySelectorAll('.grid-container');
 
 containers.forEach(container => {
-  // Tìm thanh resizer NẰM TRONG container này
   const resizer = container.querySelector('.resizer');
-  
-  // Nếu không có thanh resizer thì bỏ qua
   if (!resizer) return;
 
   resizer.addEventListener('mousedown', function(e) {
     e.preventDefault();
     
     const startX = e.clientX;
-    // Lấy phần tử bên trái (md-left)
     const leftElement = resizer.previousElementSibling;
     const startLeftWidth = leftElement.offsetWidth;
+    
+    // Lấy chiều rộng hiện tại của toàn bộ container
+    const containerWidth = container.offsetWidth;
 
     function onMouseMove(e) {
       const deltaX = e.clientX - startX;
-      const newLeftWidth = startLeftWidth + deltaX;
+      let newLeftWidth = startLeftWidth + deltaX;
 
-      // Giới hạn độ rộng tối thiểu 50px
-      if (newLeftWidth > 50) {
-        // Áp dụng style cho CHÍNH container đang chứa resizer này
-        container.style.gridTemplateColumns = `${newLeftWidth}px 5px 1fr`;
-      }
+      // --- PHẦN CHỈNH SỬA CHÍNH ---
+      const minWidth = 50; // Giới hạn nhỏ nhất
+      const resizerWidth = resizer.offsetWidth; // Thường là 5px
+      const maxWidth = containerWidth - resizerWidth; // Giới hạn lớn nhất (trừa lại 50px cho cột bên phải)
+
+      // Ràng buộc giá trị trong khoảng [minWidth, maxWidth]
+      if (newLeftWidth < minWidth) newLeftWidth = minWidth;
+      if (newLeftWidth > maxWidth) newLeftWidth = maxWidth;
+
+      // Áp dụng style
+      container.style.gridTemplateColumns = `${newLeftWidth}px ${resizerWidth}px 1fr`;
+      // ----------------------------
     }
 
     function onMouseUp() {

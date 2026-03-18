@@ -6182,7 +6182,6 @@ strong.title {
   /* Cột 1: thay đổi được, Cột 2: cố định 5px, Cột 3: tự động chiếm phần còn lại */
   grid-template-columns: 1fr 5px 1fr;
   height: 400px;
-  border: 1px solid #ddd;
   align-items: stretch;
   gap: 2px;
   position: relative;
