@@ -1734,7 +1734,7 @@ containers.forEach(container => {
       // --- PHẦN CHỈNH SỬA CHÍNH ---
       const minWidth = 50; // Giới hạn nhỏ nhất
       const resizerWidth = resizer.offsetWidth; // Thường là 5px
-      const maxWidth = containerWidth - resizerWidth; // Giới hạn lớn nhất (trừa lại 50px cho cột bên phải)
+      const maxWidth = containerWidth - resizerWidth -50; // Giới hạn lớn nhất (trừa lại 50px cho cột bên phải)
 
       // Ràng buộc giá trị trong khoảng [minWidth, maxWidth]
       if (newLeftWidth < minWidth) newLeftWidth = minWidth;
