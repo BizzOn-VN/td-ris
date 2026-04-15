@@ -69,6 +69,23 @@ input[type=submit] {
 img{
   width: 100%;
 }
+.page-main #wave-bg {
+    width: 100%;
+    aspect-ratio: 16/7;
+    border-radius: 12px;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    z-index: 1;
+    background: radial-gradient(ellipse at 60% 50%, #1a3a8c 0%, #0d1f5c 50%, #070f35 100%);
+  }
+.page-main canvas#wc {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 .page-main{
   background: #f0f4fa;
   height: 100vh;
@@ -80,6 +97,8 @@ img{
   display: table;
   padding-top: 30px;
   margin: 0px auto 30px auto;
+  position: relative;
+  z-index: 2;
 }
 .page-main .logo-footer{
   width: 7%;
@@ -87,11 +106,14 @@ img{
   left: 50%;
   transform: translateX(-50%);
   bottom: 0%;
+  z-index: 2;
 }
 .page-main .md-form{
   width: 20%;
   display: table;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 .page-main .md-form .md-row{
   margin-bottom: 15px;
@@ -102,6 +124,7 @@ img{
   padding: 5px 15px;
   width: 100%;
   font-family: "Open Sans", sans-serif;
+  box-shadow: 1px 2px 3px #000;
 
 }
 .page-main .md-form input[type="button"]{
