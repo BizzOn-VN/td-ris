@@ -12,36 +12,13 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'UTMAvo';
+  font-family: "Open Sans", sans-serif;
   font-size: calc(4px + 1vw);
   color: #000;
   line-height: 1.5;
   background: #FFF;
 }
-@font-face {
-  font-family: 'UTMAvo';
-  src: url(../fonts/UTMAvo/UTMAvo.woff2) format("woff2"),
-   url(../fonts/UTMAvo/UTMAvo.eot) format("eot"),
-    url(../fonts/UTMAvo/UTMAvo.ttf) format("ttf"),
-     url(../fonts/UTMAvo/UTMAvo.woff) format("woff"); }
-@font-face {
-  font-family: 'UTMAvoBold';
-  src: url(../fonts/UTMAvoBold/UTMAvoBold.woff2) format("woff2"),
-   url(../fonts/UTMAvoBold/UTMAvoBold.eot) format("eot"),
-    url(../fonts/UTMAvoBold/UTMAvoBold.ttf) format("ttf"),
-     url(../fonts/UTMAvoBold/UTMAvoBold.woff) format("woff"); }
-@font-face {
-  font-family: 'Cobe-ExtraBold';
-  src: url(../fonts/Cobe-ExtraBold/Cobe-ExtraBold.woff2) format("woff2"),
-   url(../fonts/Cobe-ExtraBold/Cobe-ExtraBold.eot) format("eot"),
-    url(../fonts/Cobe-ExtraBold/Cobe-ExtraBold.ttf) format("ttf"),
-     url(../fonts/Cobe-ExtraBold/Cobe-ExtraBold.woff) format("woff"); }
-@font-face {
-  font-family: 'Cobe-Regular';
-  src: url(../fonts/Cobe-Regular/Cobe-Regular.woff2) format("woff2"),
-   url(../fonts/Cobe-Regular/Cobe-Regular.eot) format("eot"),
-    url(../fonts/Cobe-Regular/Cobe-Regular.ttf) format("ttf"),
-     url(../fonts/Cobe-Regular/Cobe-Regular.woff) format("woff"); }
+
 
 a {
   color: #0041d1;
@@ -119,14 +96,16 @@ img{
 .page-main .md-form .md-row{
   margin-bottom: 15px;
 }
-.page-main .md-form input[type="text"]{
+.page-main .md-form input{
   border: none;
   border-radius: 5px;
   padding: 5px 15px;
   width: 100%;
+  font-family: "Open Sans", sans-serif;
 
 }
 .page-main .md-form input[type="button"]{
+  font-family: "Open Sans", sans-serif;
   background: #ed6924;
   border: none;
   width: 60%;
@@ -138,7 +117,12 @@ img{
   font-weight: 500;
   font-style: italic;
 }
-.page-main .md-form input[type="text"]::placeholder{
+.page-main .md-form input[type="button"]:hover{
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  font-weight: 500;
+}
+.page-main .md-form input::placeholder{
   font-style: italic;
   text-align: center;
 }
@@ -154,7 +138,7 @@ img{
     padding-top: 50px;
     margin-bottom: 50px;
   }
-  .page-main .md-form input[type="text"]{
+  .page-main .md-form input{
     padding: 15px 15px;
     border-radius: 10px;
   }
