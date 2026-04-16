@@ -157,7 +157,9 @@ img{
   font-style: italic;
 }
 .page-main h6{
+  text-align: center;
   color: #FFF;
+  font-family: "Open Sans", sans-serif;
   position: relative;
   z-index: 2;
   text-transform: uppercase;
