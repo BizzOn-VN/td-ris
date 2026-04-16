@@ -156,6 +156,14 @@ img{
   color: red;
   font-style: italic;
 }
+.page-main h6{
+  color: #FFF;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 1px 2px 3px #000;
+}
 @media screen and (min-width: 2000px){
   .page-main .logo{
     padding-top: 50px;
@@ -172,10 +180,13 @@ img{
     margin-bottom: 25px;
   }
   .page-main .md-form{
-    position: absolute;
+    /*position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);*/
+  }
+  .page-main h6{
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 767px){
