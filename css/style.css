@@ -12,14 +12,19 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Open Sans", sans-serif;
+   font-family: 'OpenSans';
   font-size: calc(4px + 1vw);
   color: #000;
   line-height: 1.5;
   background: #FFF;
 }
 
-
+@font-face {
+  font-family: 'OpenSans';
+  src: url(../fonts/OpenSans/OpenSans.woff2) format("woff2"),
+   url(../fonts/OpenSans/OpenSans.eot) format("eot"),
+    url(../fonts/OpenSans/OpenSans.ttf) format("ttf"),
+     url(../fonts/OpenSans/OpenSans.woff) format("woff"); }
 a {
   color: #0041d1;
   -webkit-transition-duration: 0.2s;
@@ -124,12 +129,12 @@ img{
   border-radius: 5px;
   padding: 5px 15px;
   width: 100%;
-  font-family: "Open Sans", sans-serif;
+   font-family: 'OpenSans';
   box-shadow: 1px 2px 3px #000;
 
 }
 .page-login .md-form input[type="button"]{
-  font-family: "Open Sans", sans-serif;
+   font-family: 'OpenSans';
   background: #ed6924;
   border: none;
   width: 60%;
@@ -160,14 +165,14 @@ img{
 .page-login h6{
   text-align: center;
   color: #FFF;
-  font-family: "Open Sans", sans-serif;
+   font-family: 'OpenSans';
   position: relative;
   z-index: 2;
   text-transform: uppercase;
   font-weight: 700;
   text-shadow: 1px 2px 3px #000;
 }
-@media screen and (min-height: 900px){
+@media screen and (min-height: 769px){
   .page-login .md-form{
     position: absolute;
     left: 50%;
@@ -197,12 +202,15 @@ img{
   }
 }
 @media screen and (max-width: 767px){
-  .page-login .md-form form{
-    width: 30%;
+  .page-login .md-form{
+    width: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+  }
+  .page-login .md-form form{
+    width: 30%;
   }
   .page-login .logo{
     width: 40%;
